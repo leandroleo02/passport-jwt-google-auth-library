@@ -89,37 +89,4 @@ describe('Strategy', function() {
 
     });
 
-    describe('handling request url set to url.Url instead of string', function() {
-
-        var info;
-
-        before(function(done) {
-            strategy = new Strategy({jwtFromRequest: function(r) {},  clientID: 'clientID', secretOrKey: 'secret'}, function(jwt_payload, next) {
-                // Return values aren't important in this case
-                return next(null, {}, {});
-            });
-
-            mockVerifier.reset();
-
-            chai.passport.use(strategy)
-                .fail(function(i) {
-                    info = i
-                    done();
-                })
-                .req(function(req) {
-                    req.body = {};
-                    req.url = new url.Url('/');
-                })
-                .authenticate();
-        });
-
-
-        it('should fail authentication', function() {
-            expect(info).to.be.an.object;
-            expect(info.message).to.equal("No auth token");
-        });
-
-    });
-
-
 });
