@@ -1,4 +1,3 @@
-var expect = require('chai').expect;
 var Strategy = require('../lib/strategy');
 
 describe('Strategy', function () {
@@ -24,5 +23,11 @@ describe('Strategy', function () {
         expect(function () {
             var s = new Strategy({ jwtFromRequest: {}, secretOrKey: 'secret' }, () => { });
         }).to.throw(TypeError, 'JwtGoogleAuthLibraryStrategy requires a client ID');
+    });
+
+    it('should throw if constructed without a jwtFromRequest arg', function () {
+        expect(function () {
+            var s = new Strategy({ clientID: 'clientID', secretOrKey: 'secret' }, function () { });
+        }).to.throw(TypeError);
     });
 });
