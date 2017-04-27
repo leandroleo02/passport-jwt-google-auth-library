@@ -11,6 +11,7 @@ module.exports = {
                 "exp": "9999999999"
             }
         },
+        clientID: 'clientID',
         secret: 'secret'
     }
 };
