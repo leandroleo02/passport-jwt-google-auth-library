@@ -4,7 +4,7 @@
 A [Passport](http://passportjs.org/) strategy for authenticating with a google JWT token.
 
 This module lets you authenticate endpoints using a Google JWT web token. Once the user has authenticated with a google account, 
-the token provided by google can be authorized by this module (Using [Google Auth Library] (https://github.com/google/google-auth-library-nodejs)). It is intended to be used to secure RESTful endpoints without sessions.
+the token provided by google can be authorized by this module (Using [Google Auth Library](https://github.com/google/google-auth-library-nodejs)). It is intended to be used to secure RESTful endpoints without sessions.
 
 This module is based on [passport-jwt](https://github.com/themikenicholson/passport-jwt), and use it internally.
 
