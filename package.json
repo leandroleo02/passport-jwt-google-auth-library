@@ -4,7 +4,8 @@
   "description": "Validate google jwt token via passport strategy",
   "main": "./lib/index.js",
   "scripts": {
-    "test": "grunt test"
+    "test": "grunt test",
+    "testcov": "grunt coverage"
   },
   "keywords": [
     "passport",
