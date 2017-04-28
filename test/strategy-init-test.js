@@ -1,4 +1,5 @@
-var Strategy = require('../lib/strategy');
+var requireHelper  = require('./require_helper');
+var Strategy = requireHelper('strategy');
 
 describe('Strategy', function () {
     var strategy = new Strategy({ jwtFromRequest: {}, clientID: 'clientID', secretOrKey: 'secret' }, () => { });

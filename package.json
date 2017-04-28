@@ -4,7 +4,7 @@
   "description": "Validate google jwt token via passport strategy",
   "main": "./lib/index.js",
   "scripts": {
-    "test": "grunt mochaTest"
+    "test": "grunt test"
   },
   "keywords": [
     "passport",
@@ -30,7 +30,11 @@
     "chai-passport-strategy": "^1.0.0",
     "grunt": "^1.0.1",
     "grunt-cli": "^1.2.0",
+    "grunt-contrib-clean": "^1.1.0",
+    "grunt-env": "^0.4.4",
+    "grunt-istanbul": "^0.7.2",
     "grunt-mocha-test": "^0.13.2",
+    "istanbul": "^0.4.5",
     "mocha": "^3.2.0",
     "sinon": "^2.1.0"
   }

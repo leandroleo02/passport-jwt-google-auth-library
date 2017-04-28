@@ -1,4 +1,5 @@
-var Strategy = require('../lib/strategy')
+var requireHelper  = require('./require_helper')
+    , Strategy = requireHelper('strategy')
     , chai = require('chai')
     , sinon = require('sinon')
     , test_data = require('./testdata')

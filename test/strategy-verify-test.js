@@ -1,6 +1,7 @@
-var chai = require('chai')
-    , Strategy = require('../lib').Strategy
-    , extract_jwt = require('../lib').ExtractJwt
+var requireHelper  = require('./require_helper')
+    , chai = require('chai')
+    , Strategy = requireHelper('index').Strategy
+    , extract_jwt = requireHelper('index').ExtractJwt
     , test_data = require('./testdata')
     , sinon = require('sinon');
 
